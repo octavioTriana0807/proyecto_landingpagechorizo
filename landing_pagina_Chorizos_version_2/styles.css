@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #966356;
+    color: #332825;
+}
+
+/* Encabezado */
+header {
+    display: flex;                /* Usamos Flexbox */
+    flex-direction: row;
+    justify-content: center;
+    background-color: #413B3A;
+    color: #EB5C38;
+    padding: 20px 40px;
+   
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+
+}
+
+header div{
+    
+    text-align: center;
+}
+
+/* Estilos para la imagen del chorizo */
+.chorizo-img {
+    width: 75%;        /* La imagen ocupará el 100% del ancho disponible */
+    max-width: 600px;   /* El tamaño máximo de la imagen será 600px */
+    height: auto;       /* Mantendrá la proporción de la imagen */
+    display: block;     /* Asegura que la imagen no tenga margen extra debajo */
+    margin: 0 auto;     /* Centra la imagen en su contenedor */}
+
+nav ul {
+   
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #EB5C38;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #EB5C38;
+    color: #fff;
+}
+
+/* Secciones */
+main section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F5F3F2;
+}
+
+
+.productos{
+    display:flex;
+    flex:wrap;
+    gap:15px;
+    justify-content: center;
+}
+
+section:nth-of-type(even) {
+    background-color: #E8DAD6;
+}
+
+section h2 {
+    color: #C25C42;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    color: #413B3A;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Estilo general para divs */
+.row div {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover elegante */
+.row div:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #fdf8f7;
+}
+
+/* Imagen dentro de los div */
+.row div img {
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom de imagen al pasar el mouse */
+.row div:hover img {
+    transform: scale(1.05);
+}
+
+/* Título debajo de imagen */
+.row div strong {
+    font-size: 1.2em;
+    color: #C25C42;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Decoración opcional (línea inferior sutil) */
+.row div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    height: 4px;
+    background-color: #EB5C38;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.row div:hover::after {
+    width: 60%;
+    left: 20%;
+}
